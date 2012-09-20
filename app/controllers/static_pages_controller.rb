@@ -6,6 +6,8 @@ class StaticPagesController < ApplicationController
   end  
   
   def help
-  	@moshe = "This is is some text"
   end
+
+  def contact
+  end 
 end
