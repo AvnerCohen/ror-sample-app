@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 gem 'pg', '0.12.2'
 
 group :development, :test do
+  gem 'pry-rails'
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '0.5.5'
   gem 'guard-spork', '0.3.2'
