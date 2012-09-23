@@ -1,41 +1,35 @@
 require 'spec_helper'
 
 describe "Static pages" do
-	let!(:prefix_title) { "Ruby on Rails Tutorial Sample App | "}
 
-	describe "Home page" do
+  subject { page }
 
-		it "should have the content 'Sample App'" do
-			visit home_path
-			page.should_not have_selector('title',
-			:text => prefix_title + "Sample App")
-		end
-	end
+  describe "Home page" do
+    before { visit root_path }
 
-	describe "Help page" do
+    it { should have_selector('h1',    text: 'Sample App') }
+    it { should have_selector('title', text: full_title('')) }
+    it { should_not have_selector 'title', text: '| Home' }
+  end
 
-		it "should have the content 'Help'" do
-			visit help_path
-			page.should have_selector('title',
-			:text => prefix_title + "Help")
-		end
-	end
+  describe "Help page" do
+    before { visit help_path }
 
-	describe "About page" do
+    it { should have_selector('h1',    text: 'Help') }
+    it { should have_selector('title', text: full_title('Help')) }
+  end
 
-		it "should have the content 'About Us'" do
-			visit about_path
-			page.should have_selector('title',
-			:text => prefix_title + "About Us")
-		end
-	end
+  describe "About page" do
+    before { visit about_path }
 
-	describe "Contact" do
+    it { should have_selector('h1',    text: 'About') }
+    it { should have_selector('title', text: full_title('About Us')) }
+  end
 
-		it "should have the content 'Contact'" do
-			visit contact_path
-			page.should have_selector('title',
-			:text => prefix_title + "Contact")
-		end
-	end
+  describe "Contact page" do
+    before { visit contact_path }
+
+    it { should have_selector('h1',    text: 'Contact') }
+    it { should have_selector('title', text: full_title('Contact')) }
+  end
 end
