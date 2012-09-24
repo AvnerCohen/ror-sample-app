@@ -112,4 +112,16 @@ describe User do
 	end
 
 
+	describe "with a lower cased email" do
+		let(:email_for_test) {"AA@a.com" }
+		it "should be saved as lower case email" do
+			@user.email = email_for_test.to_s
+			@user.save
+			@user.reload.email.should == email_for_test.downcase
+		end
+
+
+	end
+
+
 end
