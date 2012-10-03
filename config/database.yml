@@ -3,24 +3,24 @@ development:
   encoding: utf8
   database: project_development
   pool: 5
-  username:
-  password:
-  host: 127.0.0.1
+  username: avnerner
+  password: 
+  host: localhost
 
 test:
   adapter: postgresql
   encoding: utf8
   database: project_test
   pool: 5
-  username:
-  password:
-  host: 127.0.0.1
+  username: avnerner
+  password: 
+  host: localhost
 
 production:
   adapter: postgresql
   encoding: utf8
   database: project_production
   pool: 5
-  username:
-  password:
-  host: 127.0.0.1
+  username: avnerner
+  password: 
+  host: localhost
