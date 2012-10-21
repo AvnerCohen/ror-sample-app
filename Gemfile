@@ -24,6 +24,7 @@ group :development, :test do
   gem 'spork', '>=0.9.0'
   gem 'terminal-notifier-guard'
   gem 'factory_girl_rails', '4.1.0'
+  gem 'quiet_assets'
 end
 
 gem 'annotate', '2.5.0', group: :development
